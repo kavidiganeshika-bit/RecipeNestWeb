@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - RecipeNest</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<style>
+/* About image styling */
+.about-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center" href="index.html">
+<img src="logo.jpg" width="40" height="40" class="me-2">
+<span class="site-title">RecipeNest</span>
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
+<li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- ABOUT US SECTION -->
+<div class="container mt-5">
+<div class="row align-items-center">
+    <!-- Left text -->
+    <div class="col-md-6">
+        <h2>About Us</h2>
+        <p>
+            Welcome to RecipeNest! We are passionate about bringing all kinds of recipes to a single home. 
+            From traditional Sri Lankan dishes to modern desserts, we aim to inspire your cooking and make it fun.
+            Explore our website to discover your next favorite dish!
+        </p>
+    </div>
+    <!-- Right image -->
+    <div class="col-md-6">
+        <img src="about.jpg" alt="About Us Image" class="about-img">
+    </div>
+</div>
+</div>
+
+<!-- CONTACT FORM -->
+<div class="container mt-5">
+<h2 class="text-center">Contact Us</h2>
+<form class="mt-4" id="contactForm" onsubmit="return validateForm()">
+<div class="mb-3">
+<label class="form-label">Name</label>
+<input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Email</label>
+<input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Subject</label>
+<input type="text" id="subject" class="form-control" placeholder="Enter subject">
+</div>
+
+<div class="mb-3">
+<label class="form-label">Message</label>
+<textarea id="message" class="form-control" rows="4" placeholder="Type your message here"></textarea>
+</div>
+
+<button type="submit" class="btn btn-success">Submit</button>
+</form>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center p-3 mt-5">
+<p>© 2026 RecipeNest</p>
+</footer>
+
+<!-- BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function validateForm() {
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
+
+    if(name === "" || email === "" || message === "") {
+        alert("Please fill in your Name, Email, and Message!");
+        return false;
+    }
+
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if(!emailPattern.test(email)){
+        alert("Please enter a valid email address!");
+        return false;
+    }
+
+    alert("Thank you! Your message has been sent successfully.");
+    
+    document.getElementById("contactForm").reset();
+    return false; 
+}
+</script>
+
+</body>
+</html>

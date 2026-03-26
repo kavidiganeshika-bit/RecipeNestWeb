@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recipes - RecipeNest</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+.card-img-top {
+    height: 220px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+</style>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center" href="index.html">
+<img src="logo.jpg" width="40" height="40" class="me-2">
+<span class="site-title">RecipeNest</span>
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link active" href="recipes.html">Recipes</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- TITLE -->
+<div class="container mt-5">
+<h2 class="text-center">Recipe Library</h2>
+
+<!-- SEARCH BAR -->
+<div class="row mt-4">
+<div class="col-md-6 mx-auto">
+<input type="text" id="search" onkeyup="searchRecipes()" class="form-control" placeholder="Search recipes...">
+</div>
+</div>
+
+<div class="row mt-4 g-4">
+
+<!-- CARD 1 -->
+<div class="col-md-4">
+<div class="card">
+<img src="shoppers.jpeg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">String Hoppers</h5>
+<p class="card-text">A traditional Sri Lankan dish made from rice flour noodles served with curry.</p>
+<a href="stringHoppers.html" class="btn btn-primary">View Recipe</a>
+</div>
+</div>
+</div>
+
+<!-- CARD 2 -->
+<div class="col-md-4">
+<div class="card">
+<img src="hoppers.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Hoppers</h5>
+<p class="card-text">A bowl-shaped pancake made from fermented rice flour and coconut milk.</p>
+<a href="hoppers.html" class="btn btn-primary">View Recipe</a>
+</div>
+</div>
+</div>
+
+<!-- CARD 3 -->
+<div class="col-md-4">
+<div class="card">
+<img src="pittu.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Pittu</h5>
+<p class="card-text">A Sri Lankan steamed dish made with rice flour and grated coconut.</p>
+<a href="pittu.html" class="btn btn-primary">View Recipe</a>
+</div>
+</div>
+</div>
+
+<!-- CARD 4 -->
+<div class="col-md-4">
+<div class="card">
+<img src="roti.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Roti</h5>
+<p class="card-text">A flatbread commonly eaten with sambol or curry in Sri Lanka.</p>
+<a href="roti.html" class="btn btn-primary">View Recipe</a>
+</div>
+</div>
+</div>
+
+<!-- CARD 5 -->
+<div class="col-md-4">
+<div class="card">
+<img src="mrice.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Milk Rice</h5>
+<p class="card-text">A special Sri Lankan dish made by cooking rice with coconut milk.</p>
+<a href="milkRice.html" class="btn btn-primary">View Recipe</a>
+</div>
+</div>
+</div>
+
+<!-- CARD 6 -->
+<div class="col-md-4">
+<div class="card">
+<img src="biriyani.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Biriyani</h5>
+<p class="card-text">A flavorful rice dish cooked with spices, vegetables, and meat.</p>
+<a href="biriyani.html" class="btn btn-primary">View Recipe</a>
+</div>
+</div>
+</div>
+
+<!-- CARD 7 -->
+<div class="col-md-4">
+<div class="card">
+<img src="kottu.WEBP" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Kottu</h5>
+<p class="card-text">A famous Sri Lankan street food made with chopped roti and spices.</p>
+<a href="kottu.html" class="btn btn-primary">View Recipe</a>
+</div>
+</div>
+</div>
+
+<!-- CARD 8 -->
+<div class="col-md-4">
+<div class="card">
+<img src="tea.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Milk Tea</h5>
+<p class="card-text">A popular Sri Lankan tea made with strong tea and milk.</p>
+<a href="milkTea.html" class="btn btn-primary">View Recipe</a>
+</div>
+</div>
+</div>
+
+<!-- CARD 9 -->
+<div class="col-md-4">
+<div class="card">
+<img src="falooda.jpg" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">Falooda</h5>
+<p class="card-text">A sweet cold dessert drink made with milk, jelly, basil seeds, and ice cream.</p>
+<a href="falooda.html" class="btn btn-primary">View Recipe</a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-dark text-white text-center p-3 mt-5">
+<p>© 2026 RecipeNest</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function searchRecipes() {
+    let input = document.getElementById("search").value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+        let title = card.querySelector(".card-title").innerText.toLowerCase();
+        if(title.includes(input)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+}
+</script>
+
+</body>
+</html>
